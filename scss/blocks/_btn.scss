@@ -1,0 +1,40 @@
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    border: 1px solid #FFF;
+    border-radius: 6px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 12px 28px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    transition: .3s linear;
+    &:hover {
+        color: $gray;
+        background-color: $red;
+    }
+}
+
+.offer-btn {
+    width: 160px;
+    height: 50px;
+    border: none;
+    background-color: #fff;
+    padding: 16px 52px;
+    color: #ED4C5C;
+    cursor: pointer;
+}
+
+.btn-submit {    
+    padding: 16px;
+    width: 160px;
+    height: 50px;
+    background: #ED4C5C;
+    border: 1.5px solid #ED4C5C;
+}

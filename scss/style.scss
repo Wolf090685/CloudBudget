@@ -1,0 +1,63 @@
+@import 'base/vars';
+@import 'base/helper';
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+button:active, button:focus,
+a:active, a:focus {
+    outline: none;
+}
+  
+button::-moz-focus-inner {
+    border: 0;
+}
+
+/* Container ===================== */
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@import 'blocks/header';
+@import 'blocks/navbar';
+@import 'blocks/btn';
+@import 'blocks/video';
+@import 'blocks/section-title';
+@import 'blocks/features';
+@import 'blocks/technology';
+@import 'blocks/app';
+@import 'blocks/carousel';
+@import 'blocks/contact';
+@import 'blocks/footer';
+@import 'blocks/toTop';
+@import 'blocks/burger';

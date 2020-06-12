@@ -1,0 +1,28 @@
+.footer__to-top {
+    display: none;
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;    
+    background-color: transparent;
+    transition: background-color 0.3s linear;
+    @media (max-width: 575px) {
+        width: 60px;
+        height: 60px;
+        right: 20px;
+        bottom: 20px;            
+    }
+}
+
+.footer__to-top:hover {
+    background-color: $red;
+}
+
+.footer__to-top img {
+    display: block;
+    width: 100%;
+}

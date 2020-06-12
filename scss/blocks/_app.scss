@@ -1,0 +1,68 @@
+.app {
+    padding: 116px 0;
+    background-color: #ED4C5C;
+
+    @media (max-width: 575px) {
+        padding: 70px 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        @media (max-width: 1199px) {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+    &__content {
+        width: 50%;
+        max-width: 445px;
+        padding-right: 81px;
+        margin-right: 105px;
+        @media (max-width: 1199px) {
+            padding-right: 0;
+            margin-right: 0;
+            margin-bottom: 25px;
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 120%;
+        color: #FFF;
+        margin-bottom: 24px;
+        @media (max-width: 1199px) {
+            font-size: 32px;
+        }
+        @media (max-width: 575px) {
+            font-size: 28px;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 140%;        
+        text-align: justify;
+        color: #FFF;
+        margin-bottom: 42px;
+    }
+    &__download {
+        display: flex;
+        align-items: center;
+    }
+    &__download-link {
+        margin-right: 25px;
+        transition: .3s linear;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:nth-child(odd):hover {
+            transform: translateY(-8px);
+        }
+        &:nth-child(even):hover {
+            transform: translateY(8px);
+        }
+    }
+}

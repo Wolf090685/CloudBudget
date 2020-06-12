@@ -1,0 +1,113 @@
+.footer {
+    padding: 85px 0 50px;
+    background-color: #fafafa;
+    @media (max-width: 575px) {
+        padding: 50px 0;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__col {
+        width: 25%;
+        @media (max-width: 991px) {
+            width: 50%;
+            text-align: center;
+        }
+        @media (max-width: 414px) {
+            width: 100%;
+            margin-bottom: 20px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 122%;
+        color: #101010;
+        margin-bottom: 33px;
+        @media (max-width: 414px) {
+            margin-bottom: 17px;
+        }
+    }
+    &__address {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #101010;
+    }
+    &-nav__list {
+        list-style: none;
+        padding-left: 0;
+        @media (max-width: 414px) {
+            margin: 0;
+        }
+    }
+    &-nav__item {
+        margin-bottom: 5px;
+    }
+    &-nav__link {
+        font-size: 12px;
+        line-height: 160%;
+        color: #000;
+        transition: .3s linear;
+        &:hover {
+            text-decoration: underline;
+            color: $red;
+        }
+    }
+    &__mail,
+    &__phone {
+        display: table;
+        font-size: 12px;
+        line-height: 160%;
+        color: #121212;
+        margin-bottom: 5px;
+        transition: .2s linear;
+        &:hover {
+            text-decoration: underline;
+            color: $red;
+        }
+        @media (max-width: 991px) {
+            margin: 0 auto 5px;
+        }
+    }
+    &__social-link {
+        margin-right: 15px;
+        transition: .3s linear;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:nth-child(odd):hover {
+            transform: translateY(-8px);
+        }
+        &:nth-child(even):hover {
+            transform: translateY(8px);
+        }
+    }
+    &__pay-methods {
+        display: table-caption;
+        @media (max-width: 991px) {
+            display: block;
+        }
+    }
+    &__pay-icon {
+        width: 50px;
+    }
+    &__copyright {
+        font-size: 12px;
+        line-height: 116%;
+        color: #101010;
+        @media (max-width: 991px) {
+            text-align: center;
+            margin-top: 50px;
+        }
+        @media (max-width: 414px) {
+            margin-top: 30px;
+        }
+    }
+}
