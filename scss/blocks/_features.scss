@@ -2,25 +2,23 @@
     padding: 63px 0 229px;
     background-color: #fafafa;
 
-    @media (max-width: 575px) {
-        padding: 45px 0 200px;           
+    @media (max-width: 1199px) {
+        padding: 63px 0;         
     }
 
     &__inner {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     &__item {
-        width: 33.3%;
+        width: 100%;
+        max-width: 350px;
         position: relative;
 
         @media (max-width: 1199px) {
             width: 50%;
-            max-width: 371px;
-            margin: 0 auto 140px;
-            &:last-of-type{
-                margin-bottom: 0;
-            }
+            margin: 0 auto 200px;
         }
 
         @media (max-width: 767px) {
@@ -34,10 +32,11 @@
     background: #FFF;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 293px;
     position: absolute;
-    top: 63%;
-    left: 8%;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    margin-top: -40px;
     text-align: center;
 
     &__title {
