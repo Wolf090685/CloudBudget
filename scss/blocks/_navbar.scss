@@ -30,6 +30,9 @@
             text-align: left;
             background-color: rgba(205, 115, 115, 0.95);
             z-index: 5;
+            &.show {
+                display: block;
+            }
         }
     }
     
@@ -56,12 +59,10 @@
             left: 0;
             z-index: 1;
             transition: opacity .3s linear;
-            @media (max-width: 991px) {
-                width: 82%;
-            }
         }
         @media (max-width: 991px) {
             padding: 15px 50px;
+            display: block;
         }
     }
 
@@ -73,6 +74,9 @@
     &__menu-item {
         margin-right: 20px;
         &:last-of-type{
+            margin-right: 0;
+        }
+        @media (max-width: 991px) {
             margin-right: 0;
         }
     }

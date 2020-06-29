@@ -520,6 +520,9 @@ button::-moz-focus-inner {
     background-color: rgba(205, 115, 115, 0.95);
     z-index: 5;
   }
+  .navbar__menu-list.show {
+    display: block;
+  }
 }
 
 .navbar__menu-link {
@@ -554,14 +557,9 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 991px) {
-  .navbar__menu-link::after {
-    width: 82%;
-  }
-}
-
-@media (max-width: 991px) {
   .navbar__menu-link {
     padding: 15px 50px;
+    display: block;
   }
 }
 
@@ -575,6 +573,12 @@ button::-moz-focus-inner {
 
 .navbar__menu-item:last-of-type {
   margin-right: 0;
+}
+
+@media (max-width: 991px) {
+  .navbar__menu-item {
+    margin-right: 0;
+  }
 }
 
 .btn {
