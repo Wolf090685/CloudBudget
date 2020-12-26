@@ -1,7 +1,6 @@
 $(function () {
 
     // Carousel
-
     window.addEventListener("load", () => {
         let carousels = document.querySelectorAll(".carousel-3d");
         for (let i = 0; i < carousels.length; i++) {
@@ -59,7 +58,6 @@ $(function () {
     }
 
     // Add class "active" to menu
-
     $('.navbar__menu-link').on('click', function (event) {
         event.preventDefault();
         $('#menu a').removeClass('active');
@@ -67,25 +65,23 @@ $(function () {
     });
 
     // Scroll to top   
-
     $(window).on('scroll', function () {
         let scrolled = window.pageYOffset;
-        let btn = document.querySelector('#to-top'); 
+        let btn = document.querySelector('#to-top');
         if (scrolled > 400) {
             btn.style.display = 'block';
         } else {
             btn.style.display = '';
-        }      
+        }
     });
     $('#to-top').on('click', function (event) {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: 20
         }, 600);
-    }); 
+    });
 
     // Smooth scroll
-
     let offerH = $("#offer").innerHeight(),
         header = $("#header");
     scrollOffset = $(window).scrollTop();
@@ -109,10 +105,49 @@ $(function () {
     });
 
     // Burger menu nav toogle
-
     $('.nav-toggle').on('click', function (event) {
         event.preventDefault();
         $('.navbar__menu-list').toggleClass('show');
     });
+
+    // Validate form and mask for phone number
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                firstName: {
+                    required: true,
+                    minlength: 2  
+                },
+                lastName: {
+                    required: true,
+                    minlength: 2 
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                phone: "required"
+            },
+            messages: {
+                firstName: {
+                    required: "Please enter your first name",
+                    minlength: jQuery.validator.format("Please enter at least {0} characters!")
+                },
+                lastName: {
+                    required: "Please enter your last name",
+                    minlength: jQuery.validator.format("Please enter at least {0} characters!")
+                },                
+                email: {
+                    required: "Please enter your e-mail",
+                    email: "Please enter a valid email address"
+                },
+                phone: "Please enter a phone number"
+            }
+        });
+    }
+
+    validateForms('.form');
+
+    $('input[name=phone]').mask("+375 (999) 999-99-99");
 
 });

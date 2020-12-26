@@ -1197,7 +1197,6 @@ button::-moz-focus-inner {
   color: rgba(19, 39, 67, 0.5);
   border: 1px solid #333;
   border-radius: 6px;
-  margin-bottom: 24px;
 }
 
 .form__input:focus {
@@ -1205,15 +1204,23 @@ button::-moz-focus-inner {
   border: 1px solid #456f91;
 }
 
-.form__input-name {
-  display: inline-block;
-  width: 255px;
-  height: 60px;
-  margin-right: 20px;
+.form__input:invalid {
+  border: 1px solid red;
 }
 
-.form__input-name.mr0 {
-  margin-right: 0;
+.form__group {
+  margin-bottom: 20px;
+}
+
+.contact .error {
+  border: 1px solid red;
+}
+
+.contact label.error {
+  display: inline-block;
+  border: none;
+  color: red;
+  padding-top: 10px;
 }
 
 .footer {
