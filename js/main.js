@@ -110,17 +110,24 @@ $(function () {
         $('.navbar__menu-list').toggleClass('show');
     });
 
+    // Close mobile menu after click on body
+    $(document).click(function (e) {
+        if (!$(e.target).is('.nav-toggle') && !$(e.target).is('.nav-toggle__item')) {
+            $('.navbar__menu-list').removeClass('show');
+        }
+    });
+
     // Validate form and mask for phone number
     function validateForms(form) {
         $(form).validate({
             rules: {
                 firstName: {
                     required: true,
-                    minlength: 2  
+                    minlength: 2
                 },
                 lastName: {
                     required: true,
-                    minlength: 2 
+                    minlength: 2
                 },
                 email: {
                     required: true,
@@ -136,7 +143,7 @@ $(function () {
                 lastName: {
                     required: "Please enter your last name",
                     minlength: jQuery.validator.format("Please enter at least {0} characters!")
-                },                
+                },
                 email: {
                     required: "Please enter your e-mail",
                     email: "Please enter a valid email address"
