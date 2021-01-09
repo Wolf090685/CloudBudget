@@ -119,14 +119,21 @@ $(function () {
 
     // Validate form and mask for phone number
     function validateForms(form) {
+
+        $.validator.methods.latin = function (value, element) {
+            return this.optional (element) || /^[a-zA-Z]+$/.test(value);
+        }
+
         $(form).validate({
             rules: {
                 firstName: {
                     required: true,
+                    latin: true,
                     minlength: 2
                 },
                 lastName: {
                     required: true,
+                    latin: true,
                     minlength: 2
                 },
                 email: {
@@ -138,11 +145,13 @@ $(function () {
             messages: {
                 firstName: {
                     required: "Please enter your first name",
-                    minlength: jQuery.validator.format("Please enter at least {0} characters!")
+                    minlength: jQuery.validator.format("Please enter at least {0} characters!"),
+                    latin: "Please enter latin letters only"
                 },
                 lastName: {
                     required: "Please enter your last name",
-                    minlength: jQuery.validator.format("Please enter at least {0} characters!")
+                    minlength: jQuery.validator.format("Please enter at least {0} characters!"),
+                    latin: "Please enter latin letters only"
                 },
                 email: {
                     required: "Please enter your e-mail",
